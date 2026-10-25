@@ -33,4 +33,14 @@ android {
 // WebView app: no external dependencies beyond AndroidX appcompat
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
+
+    // Fix: kotlin-stdlib-jdk7/jdk8 merged into kotlin-stdlib since 1.8
+    constraints {
+        implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22') {
+            because 'aligns kotlin-stdlib-jdk8 with kotlin-stdlib'
+        }
+        implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22') {
+            because 'aligns kotlin-stdlib-jdk7 with kotlin-stdlib'
+        }
+    }
 }
