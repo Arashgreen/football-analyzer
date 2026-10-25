@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.FootballAnalyzer" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">#0d1b2a</item>
+        <item name="android:statusBarColor">#0d1b2a</item>
+        <item name="android:navigationBarColor">#0d1b2a</item>
+    </style>
+</resources>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d1b2a">
+<title>تحلیل‌گر فوتبال</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#4cc9f0" stroke-width="1.6"/><path d="M12 7.2l3.6 2.6-1.4 4.2h-4.4L8.4 9.8 12 7.2z" stroke="#4cc9f0" stroke-width="1.4"/><path d="M12 2v5.2M4.4 9l4 .8M19.6 9l-4 .8M7 20l2.2-3.6M17 20l-2.2-3.6" stroke="#4cc9f0" stroke-width="1.2"/></svg>
+    <span>تحلیل‌گر فوتبال</span>
+  </div>
+  <span class="season-badge" id="seasonBadge">فصل جاری</span>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>آمار فصل تیم‌های فوتبال، یکجا</h1>
+    <p class="sub">نام تیم را بنویسید؛ گل، شوت، کرنر، آفساید و سیو دروازه‌بان — جمع فصل و میانگین هر بازی، از FotMob.</p>
+  </section>
+
+  <section class="search-box">
+    <div class="search-row">
+      <input id="q" type="text" placeholder="مثلاً: Manchester City یا بایرن مونیخ" autocomplete="off" aria-label="نام تیم">
+      <button id="searchBtn" type="button">جستجو</button>
+    </div>
+    <ul id="suggest" class="suggest" hidden></ul>
+    <div class="compare-row">
+      <label><input type="checkbox" id="compareMode"> حالت مقایسه دو تیم</label>
+      <button id="csvBtn" type="button" class="ghost" hidden>دانلود CSV</button>
+    </div>
+  </section>
+
+  <section id="status" class="status" hidden></section>
+
+  <section id="results" class="results" hidden>
+    <div id="cards" class="cards"></div>
+  </section>
+</main>
+
+<footer>
+  منبع داده: FotMob — آمار فقط برای بازی‌های تمام‌شدهٔ فصل جاری محاسبه می‌شود.
+</footer>
+
+<script src="dataLayer.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
